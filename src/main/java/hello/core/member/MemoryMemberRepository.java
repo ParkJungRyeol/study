@@ -6,8 +6,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class MemoryMemberRepository implements MemberRepository{
 
-    //Option + Enter를 사용해 문제 해결
-    //동시성 이슈로 실무에서는 ConcurrentHashMap<>()을 사용한다.
     private static Map<Long, Member> store = new HashMap<>();
 
 

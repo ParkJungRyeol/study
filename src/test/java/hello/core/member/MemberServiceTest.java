@@ -1,11 +1,18 @@
 package hello.core.member;
 
+import hello.core.AppConfig;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class MemberServiceTest {
-    MemberService memberService = new MemberServiceImpl();
+    MemberService memberService;
 
+    @BeforeEach
+    public void beforeEach() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+    }
     //메인메소드 호출 뒤 로그를 비교해서 테스트 하는 것은 비효율적 TestCode를 활용하자!
     //TestCode는 given, when, then으로 명확하게 코딩
     @Test

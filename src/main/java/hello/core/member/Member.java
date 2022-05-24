@@ -2,12 +2,10 @@ package hello.core.member;
 
 public class Member {
 
-    //Shift + Command + Enter를 사용하면 세미콜론까지 완성된다.
     private long id;
     private String name;
     private Grade grade;
 
-    //Command + N을 사용하면 생성자, Getter, Setter 만드는 단축키
     public Member(long id, String name, Grade grade) {
         this.id = id;
         this.name = name;
